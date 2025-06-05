@@ -1,18 +1,16 @@
-import type { Theme } from '@/types'
-
-export const lightTheme: Theme = {
+export const lightTheme = {
   appBackground: '#FFF',
   appColor: '#000',
   appDefaultStroke: '#E0E0E0',
   appLogo: 'dnc-logo-black.svg',
-  appSkeletonFrom: '#EEE',
-  appSkeletonTo: '#CCC',
+  appSkeletonFrom: '#eee',
+  appSkeletonTo: '#ccc',
   buttons: {
     alert: '#E80000',
     alertColor: '#FFF',
-    alertoHover: '#D80000',
-    disabled: 'CCC',
-    disabledColor: '#666',
+    alertHover: '#D80000',
+    disabled: '#CCCCCC',
+    disabledColor: '#666666',
     primary: '#0C70F2',
     primaryColor: '#FFF',
     primaryHover: '#0061DE',
@@ -22,7 +20,7 @@ export const lightTheme: Theme = {
     background: '#FFF',
     border: '#E0E0E0',
     success: '#008000',
-    warning: '#F7A3000',
+    warning: '#F7A300',
   },
   textInput: {
     active: '#FFF',
@@ -35,11 +33,11 @@ export const lightTheme: Theme = {
   },
   typographies: {
     error: '#FF0202',
-    subtitle: '#666',
+    subtitle: '#828282',
     success: '#008000',
   },
 }
-export const darkTheme: Theme = {
+export const darkTheme: typeof lightTheme = {
   appBackground: '#060B26',
   appColor: '#FFF',
   appDefaultStroke: '#21497D',
@@ -49,8 +47,8 @@ export const darkTheme: Theme = {
   buttons: {
     alert: '#E80000',
     alertColor: '#FFF',
-    alertoHover: '#D80000',
-    disabled: '313649',
+    alertHover: '#D80000',
+    disabled: '#313649',
     disabledColor: '#6D7B8E',
     primary: '#0C70F2',
     primaryColor: '#FFF',
@@ -61,7 +59,7 @@ export const darkTheme: Theme = {
     background: '#0F1535',
     border: '#21497D',
     success: '#008000',
-    warning: '#F7A3000',
+    warning: '#F7A300',
   },
   textInput: {
     active: '#0F1535',
