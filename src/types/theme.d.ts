@@ -1,3 +1,6 @@
+import 'styled-components'
+import type { Theme } from './theme'
+
 export interface Theme {
   appBackground: string
   appColor: string
