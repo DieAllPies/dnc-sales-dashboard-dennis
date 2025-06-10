@@ -11,7 +11,7 @@ function Profile() {
     <>
       <Header />
       <Container className="mb-2" maxWidth="lg">
-        <GridLegacy container spacing={10}>
+        <GridLegacy container spacing={4}>
           <GridLegacy item xs={12} sm={6}>
             <CardComponent>Seus dados...</CardComponent>
           </GridLegacy>
