@@ -53,10 +53,12 @@ function Login() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    console.log('Sending login request...')
     await postData({
       email: String(formValues[0]),
       password: String(formValues[1]),
     })
+    console.log('Request finished.')
   }
 
   useEffect(() => {
