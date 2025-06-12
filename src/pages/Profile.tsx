@@ -20,7 +20,7 @@ import { logout } from '@/services'
 
 // Types
 import type { InputProps, MessageProps } from '@/types/formComponents'
-import type { ProfileData, ProfileEditableData } from '@/utils/profileData'
+import type { ProfileData, ProfileEditableData } from '@/types/profileData'
 
 function Profile() {
   const themeContext = useContext(AppThemeContext)

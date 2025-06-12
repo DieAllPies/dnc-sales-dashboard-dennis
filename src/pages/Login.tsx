@@ -24,8 +24,15 @@ import type { DecodedJWT } from '@/types/decodedJwt'
 import type { MessageProps } from '@/types/formComponents'
 import type { LoginData, LoginPostData } from '@/types/loginData'
 
+// Redux
+import { useSelector } from 'react-redux'
+import type { RootState } from '@/redux'
+
 function Login() {
   const navigate = useNavigate()
+  const { email, message } = useSelector(
+    (state: RootState) => state.createProfile
+  )
   const inputs = [
     { type: 'email', placeholder: 'Email' },
     { type: 'password', placeholder: 'Senha' },
@@ -36,7 +43,7 @@ function Login() {
   const { formValues, formValid, handleChange } = useFormValidation(inputs)
 
   const handleMessage = (): MessageProps => {
-    if (!error) return { msg: '', type: 'success' }
+    if (!error) return { msg: message ?? '', type: 'success' }
     switch (error) {
       case 401:
         return {
@@ -72,6 +79,13 @@ function Login() {
     }
     if (Cookies.get('Authorization')) navigate('/home')
   }, [data, navigate])
+
+  useEffect(() => {
+    if (email) {
+      handleChange(0, email)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [email])
 
   return (
     <>
