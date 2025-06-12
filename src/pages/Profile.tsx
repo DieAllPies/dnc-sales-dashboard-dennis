@@ -66,7 +66,7 @@ function Profile() {
   // Form
   const inputs: InputProps[] = [
     { name: 'name', type: 'text', placeholder: 'Nome', required: true },
-    { name: 'email', type: 'email', placeholder: 'email', disabled: true },
+    { name: 'email', type: 'email', placeholder: 'Email', disabled: true },
     { name: 'phone', type: 'tel', placeholder: 'Telefone', required: true },
   ]
 
