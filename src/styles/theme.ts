@@ -1,4 +1,10 @@
-export const lightTheme = {
+import type { Theme } from '@/types/theme'
+
+declare module 'styled-components' {
+  export interface DefaultTheme extends Theme {}
+}
+
+export const lightTheme: Theme = {
   appBackground: '#FFF',
   appColor: '#000',
   appDefaultStroke: '#E0E0E0',
@@ -37,7 +43,7 @@ export const lightTheme = {
     success: '#008000',
   },
 }
-export const darkTheme: typeof lightTheme = {
+export const darkTheme: Theme = {
   appBackground: '#060B26',
   appColor: '#FFF',
   appDefaultStroke: '#21497D',
