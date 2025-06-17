@@ -1,9 +1,5 @@
 import type { Theme } from '@/types/theme'
 
-declare module 'styled-components' {
-  export interface DefaultTheme extends Theme {}
-}
-
 export const lightTheme: Theme = {
   appBackground: '#FFF',
   appColor: '#000',
