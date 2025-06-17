@@ -4,7 +4,7 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 import prettier from 'eslint-config-prettier'
-
+import cypress from 'eslint-plugin-cypress'
 
 export default tseslint.config(
   { ignores: ['dist'] },
@@ -27,5 +27,17 @@ export default tseslint.config(
       ],
     },
   },
-  prettier,
+  {
+    files: ['cypress/**/*.ts', 'cypress/**/*.tsx', '**/*.cy.ts', '**/*.cy.tsx'],
+    plugins: {
+      cypress,
+    },
+    languageOptions: {
+      globals: globals.browser,
+    },
+    rules: {
+      ...cypress.configs.recommended.rules,
+    },
+  },
+  prettier
 )
